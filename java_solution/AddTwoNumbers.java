@@ -1,4 +1,4 @@
-package leetcode;
+package java_solution;
 
 /**
  * Definition for singly-linked list.
