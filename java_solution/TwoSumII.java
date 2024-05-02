@@ -19,11 +19,4 @@ public class TwoSumII {
     }
     return res;
   }
-
-  public static void main(String[] args) {
-    var res = TwoSumII.twoSum(new int[]{-1,-1,1,1,1,1,}, -2);
-
-    System.out.println(res[0]);
-    System.out.println(res[1]);
-  }
 }
