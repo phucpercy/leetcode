@@ -2,6 +2,9 @@ package java_solution;
 
 import java.util.HashMap;
 
+// Time complexity: O(n)
+// Space complexity: O(n)
+
 public class ClimbingStairs {
 
   private HashMap<Integer, Integer> lastResult = new HashMap<>();
