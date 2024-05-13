@@ -38,10 +38,4 @@ public class WordPattern {
 
     return true;
   }
-
-  public static void main(String[] args) {
-    var res = WordPattern.wordPattern("abba", "dog cat cat fish");
-
-    return;
-  }
 }
