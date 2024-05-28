@@ -5,24 +5,19 @@ import java.util.HashMap;
 public class RansomNote {
 
   // Time complexity: O(n+m)
-  // Space complexity: O(n)
+  // Space complexity: O(1)
   public boolean canConstruct(String ransomNote, String magazine) {
-    var charMap = new HashMap<Character, Integer>();
+    var alphabet = new int[26];
 
     for (char c : magazine.toCharArray()) {
-      if (charMap.get(c) == null) {
-        charMap.put(c, 1);
-      } else {
-        charMap.compute(c, (k, v) -> v+1);
-      }
+      ++alphabet[c-'a'];
     }
     for (char c : ransomNote.toCharArray()) {
-      var mChar = charMap.get(c);
-
-      if (mChar == null || mChar == 0) {
+      if (alphabet[c-'a'] == 0) {
         return false;
+      } else {
+        --alphabet[c-'a'];
       }
-      charMap.put(c, --mChar);
     }
 
     return true;
