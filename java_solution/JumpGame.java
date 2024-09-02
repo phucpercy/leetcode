@@ -14,4 +14,19 @@ public class JumpGame {
 
     return true;
   }
+
+  public int jump(int[] nums) {
+    return solve(nums, 0);
+  }
+
+  public int solve(int[] nums, int curPos) {
+    if (curPos >= nums.length - 1) return 0;
+    int res = 10001;
+
+    for (int i = 1; i <= nums[curPos]; ++i) {
+      res = Math.min(res, 1 + solve(nums, curPos + i));
+    }
+
+    return res;
+  }
 }
